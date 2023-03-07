@@ -1,0 +1,257 @@
+:root {
+  --main-color: #7300fa;
+  --dark-grey: #353740;
+  --light-grey: #666666;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: borer-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+
+}
+
+.container {
+  background-color: #fff;
+  position: absolute;
+  width: 40%;
+  min-width: 580px;
+  height: auto;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 0;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  margin: 1rem 0;
+  color: var(--dark-grey);
+}
+
+h1 {
+  color: var(--main-color);
+  font-size: 3rem;
+}
+
+.dex {
+  color: var(--main-color);
+}
+
+.btn {
+  background-color: var(--main-color);
+  color: #fff;
+  width: 250px;
+  border: 0;
+  border-radius: 5px;
+  margin: 10px 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.number-box {
+  width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+
+.number {
+  display: inline-block;
+  width: 110px;
+  height: 55px;
+  font-weight: 600;
+  color: black;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid var(--light-grey);
+  font-size: 30px;
+  transition: 1s ease;
+}
+
+.color {
+  transition: all 1s ease-in-out;
+  color: #fff;
+  background-color: var(--light-grey);
+  border: none;
+}
+
+.main-color {
+  transition: all 1s ease-in-out;
+  background-color: var(--main-color);
+  color: #fff;
+  transform: scale(1.4);
+  border: none;
+}
+
+ul {
+  margin: 1rem 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+ul li {
+  position: relative;
+  margin-left: 2rem;
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+}
+
+ul li:before {
+  content: "";
+  position: absolute;
+  left: 55px;
+  top: 5px;
+  border: solid 8px var(--main-color);
+  border-radius: 8px;
+}
+
+ul li::after {
+  content: "";
+  position: absolute;
+  left: 60px;
+  top: 8px;
+  width: 3px;
+  height: 6px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.modal.active {
+  transform: scale(1);
+}
+
+.test {
+  font-weight: bold;
+  color: black;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fff;
+  width: 800px;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+@media (max-width: 500px) {
+  .container {
+    min-width: 350px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 200px;
+    font-size: 12px;
+  }
+
+  .number-box {
+    width: 280px;
+  }
+
+  .number {
+    width: 70px;
+    height: 30px;
+    font-size: 21px;
+  }
+
+  ul li:before {
+    content: "";
+    position: absolute;
+    left: 35px;
+    top: 5px;
+    border: solid 8px var(--main-color);
+    border-radius: 8px;
+  }
+
+  ul li::after {
+    content: "";
+    position: absolute;
+    left: 40px;
+    top: 8px;
+    width: 3px;
+    height: 6px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  /* Modal */
+/* 
+  .modal {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+  }
+  .modal.active {
+    transform: scale(1);
+  }
+
+  .modal_content {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: white;
+    height: 200px;
+    width: 200px;
+  } */
+}
