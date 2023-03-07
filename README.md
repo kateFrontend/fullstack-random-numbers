@@ -1,5 +1,5 @@
 # Random Numbers Generator
-![cover](./assets/)
+![cover](./assets/random-numbers.jpg)
 
 ## 🦉 Main information
 
@@ -21,10 +21,9 @@ Technical requirements for this challenge:
 
 The solution is built with Node.js (NODE-CACHE) et Express.js for the Back-end and React.js for Front-end.
 
-![image](./assets/)
+![image](./assets/random.gif)
 
 #
-
 
 
 ## 🦊 Useful links 
